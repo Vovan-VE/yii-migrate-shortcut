@@ -1,0 +1,25 @@
+#!/bin/bash
+
+if [ $# -eq 0 ]; then
+    echo "Usage: $0 <name> ..." >&2
+    exit 1
+fi
+
+if [ -z "$MIGRATION_TEMPLATE_FILE" ]; then
+    MIGRATION_TEMPLATE_FILE=@app/tmp~/migration.tpl.php
+fi
+
+WAS_ANY=''
+TOTAL=$#
+INDEX=0
+
+while [ $# -gt 0 ]; do
+    if [ -n "$WAS_ANY" ]; then
+        sleep 1
+    fi
+    ./yii migrate/create "$1" --templateFile="$MIGRATION_TEMPLATE_FILE" --interactive=0
+    WAS_ANY=1
+    (( ++INDEX ))
+    echo "+++ [$INDEX/$TOTAL] $1"
+    shift
+done

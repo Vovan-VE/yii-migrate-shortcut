@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [ $# -gt 0 ]; then
+    ./yii "migrate/$@" --interactive=0
+else
+    ./yii migrate --interactive=0
+fi
