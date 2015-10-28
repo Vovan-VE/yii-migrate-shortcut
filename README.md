@@ -1,7 +1,7 @@
 Yii2 migration tool shortcut
 ============================
 
-Here are some tiny shel scripts to shortcut [Yii2](https://github.com/yiisoft/yii2)
+Here are some tiny shell scripts to shortcut [Yii2](https://github.com/yiisoft/yii2)
 migration tool usage.
 
 What and why
@@ -20,8 +20,8 @@ undo applied part of the migration.
 
 ### The problem #2
 
-So, you need a number of tiny DDL migrations. But are lazy to do like
-following:
+So, you need a number of tiny DDL migrations. But you are lazy to do
+like following:
 
     $ ./yii migrate/create do_foo
     Create new migration '.../.._do_foo.php'? (yes|no) [no]:<y><Enter>
@@ -97,7 +97,7 @@ Just migrate whatever available:
 
 Run subcommand:
 
-    $./migrate redo 7
+    $ ./migrate redo 7
 
     Total 7 new migrations to be redone:
     ...
