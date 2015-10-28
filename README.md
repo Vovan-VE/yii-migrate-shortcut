@@ -20,7 +20,7 @@ undo applied part of the migration.
 
 ### The problem #2
 
-So, you need a number of tiny DDl migrations. But are lazy to do like
+So, you need a number of tiny DDL migrations. But are lazy to do like
 following:
 
     $ ./yii migrate/create do_foo
